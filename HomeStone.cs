@@ -3,6 +3,20 @@
 // Version 1.1, released in runuo.com forums
 // Version 1.2, fixed for ServUO by Ixtabay
 // Version 1.21, If less than 1 minute on timer, will show seconds.
+/*
+To add this item to new players backpack, you need to add the following to CharacterCreation.cs 
+
+// ------------------------------------------------- Add HomeStone			
+			PackItem(new HomeStone());
+			var item = m.Backpack.FindItemByType<HomeStone>();
+			if( item != null )
+			{
+				item.OnDoubleClick( m ); // Take ownership of the HomeStone
+			}	
+// ----------------------------------------------------------------		
+
+*/
+
 using System;
 using System.Collections.Generic;
 using Server;
